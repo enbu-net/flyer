@@ -12,9 +12,9 @@
 
 #set document(title: "enbu はじめかたガイド", author: "enbu")
 #set page(paper: "a4", margin: (x: 12mm, top: 11mm, bottom: 9mm))
-#set text(font: ("Noto Sans CJK JP"), size: 8.6pt, fill: ink, lang: "ja")
+#set text(font: "UDEV Gothic 35NF", size: 8.6pt, fill: ink, lang: "ja")
 #set par(leading: 0.55em, spacing: 0.7em)
-#show raw: set text(font: ("DejaVu Sans Mono", "Noto Sans CJK JP"), size: 7.6pt)
+#show raw: set text(font: "UDEV Gothic 35NF", size: 7.8pt)
 #show raw.where(block: false): it => box(
   fill: code-bg, inset: (x: 2.5pt), outset: (y: 2pt), radius: 2pt, it,
 )
@@ -89,7 +89,7 @@
   {
     text(size: 9pt, fill: muted, weight: "bold", tracking: 0.05em)[GETTING STARTED]
     v(-4pt)
-    text(size: 25pt, weight: "black")[enbu はじめかたガイド]
+    text(size: 25pt, weight: "bold")[enbu はじめかたガイド]
     v(-6pt)
     text(size: 10pt)[チームの `.env` を、鍵を配らずに共有する CLI]
   },
