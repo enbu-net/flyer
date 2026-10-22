@@ -64,28 +64,21 @@
 
 #heading-row([まずはインストール], aside: [管理者もメンバーも])
 
-#let os(name, body) = block(width: 100%, {
-  text(size: s-title, weight: "bold", name)
-  v(-1mm)
-  body
-})
+#let os(name) = text(size: s-title, weight: "bold", name)
 
 #grid(
-  columns: (1fr, 1fr, 21mm),
+  columns: (40mm, 1fr, 21mm),
   column-gutter: 5mm,
-  os("macOS ・ Ubuntu", [
-    #cmd(fill: surface, `brew install enbu-net/tap/enbu`)
-    #note[Ubuntu で brew がなければ、Releases の tar.gz から]
-  ]),
-  os("Windows", [
-    #block(above: 2.5mm, below: 2.5mm)[Releases の zip を展開し、\ `enbu.exe` を Path の通ったフォルダへ]
-    #note[入ったか確認：`enbu --version`（どの OS でも）]
-  ]),
-  align(center, {
+  row-gutter: 1mm,
+  align: horizon,
+  os[macOS ・ Linux], cmd(fill: surface, `curl -fsSL https://enbu.net/install.sh | sh`),
+  grid.cell(rowspan: 3, align(center, {
     image("assets/qr-download.svg", width: 19mm)
     v(-1.5mm)
     note[Releases]
-  }),
+  })),
+  [#os[Windows] #h(1mm) #note[PowerShell]], cmd(fill: surface, `irm https://enbu.net/install.ps1 | iex`),
+  [], note[入ったか確認：`enbu --version`],
 )
 
 #v(gap-section)
