@@ -1,0 +1,14 @@
+{
+  "name": "enbu-flyer",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "node scripts/build.ts _site"
+  },
+  "dependencies": {
+    "@minitype/minitype": "0.1.7"
+  }
+}

@@ -2,3 +2,6 @@ _site/
 *.pdf
 *.png
 !assets/*.png
+node_modules/
+font-caches.db
+fonts/SourceHanSerifJP-Regular.otf
