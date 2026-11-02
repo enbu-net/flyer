@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - name: Install Typst
-        run: pip install typst==0.15.0
+          node-version: "22"
+          cache: npm
+      - run: npm ci
       - name: Build
-        run: python scripts/build.py _site
+        run: npm run build
       - uses: actions/upload-artifact@v4
         with:
           name: flyer
