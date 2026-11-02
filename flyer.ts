@@ -300,8 +300,8 @@ const flowSection: Block[] = [
     {
       role: "a",
       title: "秘密を入れて共有する",
-      commands: ["enbu import .env", "git push"],
-      height: 23.5,
+      commands: ["enbu import .env", "git add enbu.toml .gitignore", "git commit && git push"],
+      height: 28,
       other: [tip([strong("enbu.toml"), " がリポジトリで届く"]), note("中身は暗号化され、保存先にあります")],
     },
     {
